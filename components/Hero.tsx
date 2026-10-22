@@ -8,8 +8,6 @@ const Hero: React.FC = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const firstName = profile.name.split(' ')[0].toUpperCase();
-
   return (
     <section id="hero" className="relative pt-24 pb-16 lg:pt-36 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 dark:bg-purple-600/5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -25,7 +23,7 @@ const Hero: React.FC = () => {
 
           <div className="space-y-6 max-w-4xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 dark:text-white leading-none uppercase select-none">
-              {firstName}
+              {profile.name}
             </h1>
             <div className="h-1 w-12 bg-purple-600 mx-auto rounded-full"></div>
             
