@@ -96,7 +96,7 @@ export const profile: Profile = {
     }
   ],
   socials: [
-    { platform: "GitHub", url: "https://github.com/mohald-3" },
+    { platform: "GitHub", url: "https://github.com/lindeddie" },
     { platform: "LinkedIn", url: "https://www.linkedin.com/in/eddielind/" },
     { platform: "Email", url: "mailto:m.eddie.lind@gmail.com" }
   ],

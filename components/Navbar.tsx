@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ArrowLeft, Sun, Moon } from 'lucide-react';
 import Logo from './Logo';
+import { profile } from '../data/profile';
 
 interface NavbarProps {
   theme?: 'light' | 'dark';
@@ -52,17 +53,17 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark', toggleTheme }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex shrink-0 items-center space-x-3 group">
             <div className="transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]">
               <Logo className="w-8 h-8" />
             </div>
             <span className="text-sm font-bold tracking-[0.2em] text-zinc-900 dark:text-white transition-colors duration-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 uppercase font-mono">
-              EDDIE
+              {profile.name}
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {isProjectPage ? (
               <Link to="/" className="flex items-center text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
@@ -93,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark', toggleTheme }) => {
           </div>
 
           {/* Mobile Actions */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2">
             {toggleTheme && (
               <button onClick={toggleTheme} className="p-2 text-zinc-500 dark:text-zinc-400">
                 {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -112,7 +113,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark', toggleTheme }) => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-[#0a0a0c] border-b border-zinc-200 dark:border-white/10 animate-in fade-in slide-in-from-top-4">
+        <div className="lg:hidden bg-white dark:bg-[#0a0a0c] border-b border-zinc-200 dark:border-white/10 animate-in fade-in slide-in-from-top-4">
           <div className="px-4 pt-2 pb-6 space-y-1">
             {navLinks.map((link) => (
               <button

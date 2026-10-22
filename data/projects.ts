@@ -39,7 +39,7 @@ export const projects: Project[] = [
       "Background location tracking requires explicit handling for interruptions and unreliable GPS samples.",
       "Keeping the app local-first makes data ownership and offline behaviour simpler for the user, but moves synchronization and consistency concerns onto the device."
     ],
-    githubUrl: "https://github.com/mohald-3/velolog-app"
+    githubUrl: "https://github.com/lindeddie/velolog-app"
   },
   {
     slug: "godo",
@@ -162,10 +162,10 @@ export const projects: Project[] = [
       "Agile development and rapid prototyping in a hackathon environment.",
       "Integrating third-party AI/ML services into a .NET Core backend."
     ],
-    githubUrl: "https://github.com/mohald-3/FridgePalBE",
+    githubUrl: "https://github.com/lindeddie/FridgePalBE",
     repositories: [
-      { label: "Frontend Repo", url: "https://github.com/mohald-3/FridgePalFE" },
-      { label: "Backend Repo", url: "https://github.com/mohald-3/FridgePalBE" }
+      { label: "Frontend Repo", url: "https://github.com/lindeddie/FridgePalFE" },
+      { label: "Backend Repo", url: "https://github.com/lindeddie/FridgePalBE" }
     ]
   }
 ];

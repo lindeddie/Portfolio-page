@@ -11,6 +11,7 @@ const Logo: React.FC<LogoProps> = ({ className = "w-10 h-10" }) => {
       fill="none" 
       xmlns="http://www.w3.org/2000/svg" 
       className={className}
+      aria-hidden="true"
     >
       <defs>
         <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -33,11 +34,11 @@ const Logo: React.FC<LogoProps> = ({ className = "w-10 h-10" }) => {
         strokeLinecap="round" 
         strokeLinejoin="round"
       />
-      {/* Stylized 'M' */}
+      {/* Eddie Lind monogram */}
       <path 
-        d="M25 70 V35 L50 55 L75 35 V70" 
+        d="M44 33 H27 V67 H44 M27 50 H41 M59 33 V67 H76"
         stroke="url(#logo-gradient)" 
-        strokeWidth="8" 
+        strokeWidth="6"
         strokeLinecap="round" 
         strokeLinejoin="round"
       />
